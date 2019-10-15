@@ -19,4 +19,18 @@ const getBooksQuery = gql`
   } 
 }
 `
-export {getAuthersQuery , getBooksQuery};
+
+const getSpecificBook = gql`
+  query($id:ID){
+    book(id:$id){
+      name
+      generation
+      auther{
+        name
+      }
+    }
+  
+  
+}
+`
+export { getAuthersQuery, getBooksQuery, getSpecificBook };

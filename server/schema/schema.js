@@ -20,7 +20,7 @@ const BookType = new GraphQLObjectType({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
     generation: { type: GraphQLString },
-    authorId: { type: GraphQLString },
+    authorId: { type: GraphQLID },
     auther: {
       type: AutherType,
       resolve(parent, args) {
